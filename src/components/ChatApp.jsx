@@ -30,7 +30,7 @@ const ChatApp = () => {
     if (text.trim()) {
       try {
         const { uid, displayName, gender } = auth.currentUser;
-  
+        console.log('Sending message by user:', { uid, displayName, gender });
         if (recipientId) {
           // Create a unique conversation ID based on sender and recipient UIDs
           const conversationId = [uid, recipientId].sort().join('_'); // Sort to create a consistent ID
